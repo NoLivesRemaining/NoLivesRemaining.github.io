@@ -2,8 +2,10 @@
 
 :root {
 	--main-color: #424242;
-	--secondary-color: #666666;
-	--accent-color: #e91d63;
+	--text-color: #666666;
+	--links-color: #e91d63;
+	--link-underline-color: var(links-color);
+	--navbar-color: var(--main-color);
 }
 
 html {
@@ -14,9 +16,193 @@ body {
 	/*background-color:; */
 	font-family:"Merriweather";
 }
+/*text elements*/
+.title {
+	color: var(--text-color);
+	text-align: center;
+	font-size: 5vh;
+	padding-bottom: 0vh;
+}
 
-.title
-.game-index-title
-.game-index-subtitle
-.description
-.more-info
+.page-title{
+	text-align: center;
+	font-size: 5vh;
+	padding-bottom: 0vh;
+	padding-top: 3vh;
+		margin: 0;
+
+}
+
+.subtitle {
+	color: var(--text-color);
+	text-align: center;
+	font-size: 3vh;
+	padding-bottom: 0vh;
+}
+
+.game-index-title {
+	color: var(--text-color);
+	text-decoration: none;
+}
+
+.game-index-subtitle {
+	color: var(--text-color);
+}
+
+.description {
+	color: var(--text-color);
+}
+
+.more-info  {
+	color: var(--links-color);
+	text-decoration: underline;
+	text-decoration-color:var(--link-underline-color);
+}
+
+.navbar-link {
+	color: var(--links-color);
+
+}
+
+.main-text {
+	color: var(--text-color);
+}
+
+
+/*formating elements*/
+.navbar {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	gap: 2vw;
+	background-color: var(--navbar-color);
+	position: sticky;
+	padding: 1vh;
+	gap: 2vw;
+	top: 0;
+	-ms-flex-item-align: stretch;
+	    -ms-grid-row-align: stretch;
+	    align-self: stretch;
+ 
+}
+@media (max-width: 768px) {
+	.navbar {
+		-webkit-box-pack:space-around;
+			-ms-flex-pack:space-around;
+				justify-content:space-around;
+	}
+}
+
+.vertical-flex {
+	display: flex-inline;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	gap: 2vh;
+}
+
+.game {
+		display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	gap: 1vw;
+	padding: 1vh;
+}
+
+.game-sidebar {
+		display: flex-inline;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	width:25vw
+}
+
+.sidebar-image {
+	width:25vw;
+	/*height:14.0625vw;*/
+}
+
+.image-word-split{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	gap: 2vw;
+}
+
+.flex-25vw {
+	display: flex-inline;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	width:25vw
+}
+
+	
+/*image and video elements*/
+
+.align-me-center-video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:50vw;
+  padding-top:3vh;
+}
+
+.align-me-center-header-video {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width:50vw;
+	height:28.125vw;
+	-webkit-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-ms-flex-item-align: center;
+	    -ms-grid-row-align: center;
+	    align-self: center;
+}
+
+
+.in-page-sidebar-image {
+	width:25vw;
+	/*height:14.0625vw;*/
+}
