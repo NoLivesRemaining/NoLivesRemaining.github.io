@@ -6,6 +6,8 @@
 	--links-color: #e91d63;
 	--link-underline-color: var(links-color);
 	--navbar-color: var(--main-color);
+	--emailbar-color: var(--main-color);
+	--email-color: var(--links-color)
 }
 
 html {
@@ -27,7 +29,7 @@ body {
 .page-title{
 	text-align: center;
 	font-size: 5vh;
-	padding-bottom: 0vh;
+	padding-bottom: 5vh;
 	padding-top: 3vh;
 		margin: 0;
 
@@ -37,15 +39,19 @@ body {
 	color: var(--text-color);
 	text-align: center;
 	font-size: 3vh;
-	padding-bottom: 0vh;
+	padding-bottom: 5vh;
 }
 
 .game-index-title {
 	color: var(--text-color);
 	text-decoration: none;
+	font-weight: bold;
+	
 }
 
 .game-index-subtitle {
+	font-style: italic;
+	font-weight: normal;
 	color: var(--text-color);
 }
 
@@ -61,11 +67,32 @@ body {
 
 .navbar-link {
 	color: var(--links-color);
+}
 
+.email {
+	color: var(--email-color);
 }
 
 .main-text {
 	color: var(--text-color);
+}
+
+.sticky-footer { /*need for safari*/
+	position: sticky;
+	bottom: 0;
+	background-color: var(--emailbar-color);
+	padding: 1vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	gap: 2vw;
 }
 
 
@@ -100,6 +127,29 @@ body {
 	}
 }
 
+.right-aligned-flexbox {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack:right;
+	    -ms-flex-pack:right;
+	        justify-content:right;
+	-webkit-box-align: right;
+	    -ms-flex-align: right;
+	        align-items: right;
+			margin-top: auto
+}
+
+@media (max-width: 768px) {
+	.right-aligned-flexbox {
+		
+	}
+}
+
 .vertical-flex {
 	display: flex-inline;
 	-webkit-box-orient: vertical;
@@ -131,7 +181,7 @@ body {
 }
 
 .game-sidebar {
-		display: flex-inline;
+		display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
@@ -140,6 +190,18 @@ body {
 	    -ms-flex-pack:center;
 	        justify-content:center;
 	width:25vw
+	
+}
+
+.game-sidebar-game-info {
+	display: flex-inline;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
 }
 
 .sidebar-image {
