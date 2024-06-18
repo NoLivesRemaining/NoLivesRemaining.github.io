@@ -178,6 +178,8 @@ body {
 }
 
 .about-me {
+	margin-top: 10vh;
+	margin-bottom: 10vh;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -226,9 +228,6 @@ body {
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
-	-webkit-box-pack:center;
-	    -ms-flex-pack:center;
-	        justify-content:center;
 	margin-left: 5vw;
 }
 
