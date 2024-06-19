@@ -156,12 +156,6 @@ body {
 			margin-top: auto
 }
 
-@media (max-width: 768px) {
-	.right-aligned-flexbox {
-		
-	}
-}
-
 .vertical-flex {
 	display: flex-inline;
 	-webkit-box-orient: vertical;
