@@ -12,50 +12,23 @@
 			<a class="navbar-link" href="index.html">Games I've created</a>
 			<a class="navbar-link" href="about.html">About me</a>
 		</div>
-		<div class="align-me-center-video"><div id="player" class="align-me-center-header-video"></div></div>
-		<script>
-			  // 2. This code loads the IFrame Player API code asynchronously.
-			  var tag = document.createElement('script');
+		<div class="align-me-center-video"><div id="player" class="align-me-center-header-video">		
+			<blockquote class="twitter-tweet" data-media-max-width="560">
+			<p lang="en" dir="ltr">How about a little <a href="https://twitter.com/hashtag/ThrowbackTuesday?src=hash&amp;ref_src=twsrc%5Etfw">#ThrowbackTuesday</a>?
+			<br>
+			<br>
+			I was digging around on my computer when I stumbled upon the Deity&#39;s Form trailer, made back when a bigger release was planned To my knowledge it never saw the light of day... until now. Enjoy!
+			<a href="https://twitter.com/hashtag/Trailer?src=hash&amp;ref_src=twsrc%5Etfw">#Trailer</a> 
+			<a href="https://twitter.com/hashtag/gamedev?src=hash&amp;ref_src=twsrc%5Etfw">#gamedev</a> 
+			<a href="https://twitter.com/hashtag/roguelike?src=hash&amp;ref_src=twsrc%5Etfw">#roguelike</a> 
+			<a href="https://twitter.com/DeityForm?ref_src=twsrc%5Etfw">@DeityForm</a> <a href="https://t.co/HQhhHBBPG4">pic.twitter.com/HQhhHBBPG4</a>
+			</p>&mdash; GraKnight Games (@graknight_dev) <a href="https://twitter.com/graknight_dev/status/1602664825272045569?ref_src=twsrc%5Etfw">December 13, 2022</a>
+			</blockquote> 
+			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
+				
+			</script> </div></div>
 
-			  tag.src = "https://www.youtube.com/iframe_api";
-			  var firstScriptTag = document.getElementsByTagName('script')[0];
-			  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-			  // 3. This function creates an <iframe> (and YouTube player)
-			  //    after the API code downloads.
-			  var player;
-			  function onYouTubeIframeAPIReady() {
-				player = new YT.Player('player', {
-				  height: '390',
-				  width: '640',
-				  videoId: 'hp9YgGnlyIo',
-				  playerVars: {
-					'playsinline': 1
-				  },
-				  events: {
-					'onReady': onPlayerReady,
-					'onStateChange': onPlayerStateChange
-				  }
-				});
-			  }
-
-			  // 4. The API will call this function when the video player is ready.
-			  function onPlayerReady(event) {
-			  }
-
-			  // 5. The API calls this function when the player's state changes.
-			  //    The function indicates that when playing a video (state=1),
-			  //    the player should play for six seconds and then stop.
-			  var done = false;
-			  function onPlayerStateChange(event) {
-				if (event.data == YT.PlayerState.PLAYING && !done) {
-				  done = true;
-				}
-			  }
-			  function stopVideo() {
-				player.stopVideo();
-			  }
-		</script>
 		</div>
 		<h1 class="page-title">
 			Super Farming Boy
