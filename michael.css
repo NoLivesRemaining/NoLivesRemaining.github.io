@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather");
 
 :root {
-	--main-color: #424242;
-	--text-color: #666666;
-	--links-color: #e91d63;
+	--main-color: #470038;
+	--text-color: #ececec;
+	--links-color: #e918bc;
 	--link-underline-color: var(links-color);
 	--navbar-color: var(--main-color);
 	--emailbar-color: var(--main-color);
@@ -15,7 +15,7 @@ html {
 }
 
 body {
-	/*background-color:; */
+	background-color: #333333;
 	font-family:"Merriweather";
 }
 /*text elements*/
@@ -27,6 +27,7 @@ body {
 }
 
 .page-title{
+	color: var(--text-color);
 	text-align: center;
 	font-size: 5vh;
 	padding-bottom: 5vh;

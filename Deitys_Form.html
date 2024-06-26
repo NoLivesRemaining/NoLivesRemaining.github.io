@@ -13,7 +13,7 @@
 			<a class="navbar-link" href="about.html">About me</a>
 		</div>
 		<div class="align-me-center-video"><div id="player" class="align-me-center-header-video">		
-			<blockquote class="twitter-tweet" data-media-max-width="560">
+			<blockquote class="twitter-tweet" data-media-max-width="1120">
 			<p lang="en" dir="ltr">How about a little <a href="https://twitter.com/hashtag/ThrowbackTuesday?src=hash&amp;ref_src=twsrc%5Etfw">#ThrowbackTuesday</a>?
 			<br>
 			<br>
@@ -36,6 +36,12 @@
 		<div class="subtitle">
 			Production/Programming (Menus, Combat AI, Accessability & Gameplay)
 		</div>
+		<div class="subtitle">
+		<a class="more-info" href="https://bacon-bagel-games.itch.io/deitys-form">Play Here</a>
+		</div>
+		<div class="subtitle">
+			<a class="more-info" href="https://github.com/BaconBagles/Deity-s-Form">Github Here</a>
+			</div>
 		<div class="image-word-split">
 			<div class="flex-25vw">
 			<img class="in-page-sidebar-image" src="images\DeitysForm\8dk2AT.png">
@@ -47,15 +53,13 @@
 				<div class="main-text">
 
 <p>
-Deity's Form was 
+Deity's Form was a fascinating project to be a part of and seeing a full game from concepting to release was an immensely gratifying experience. We were a team of four with myself and one other of the team being dedicated programmers. It's a Rogue-lite RPG where the player needs to move from room to room, clearing away enemies by countering with specific shapeshifting forms. 
 </p><p>
-Second Paragraph
+The first major aspect of the game that I worked on was the enemy combat AI. I started with having them surround the player by using several different methods. First, far away enemies would move directly towards the player, avoiding obstacles around the map. Then once they got close enough to engage the player, they would then switch to a flocking boid that would have them orbid the player, avoiding obstacles and each other with their distance to the player being determined by the enemies type. Once I had their pathing down, their attacking code was next. I programmed in the timer and, rather than have every enemy attack at once, made it so that each enemy would attack in sequence with the size, speed and damage of their attacks determined by type once more. This massively improved game feel and gave elusive players the opportunity to avoid every attack rather than pincushioning slower players.
 </p><p>
-Third Paragraph
+With the enemies working, I moved onto the UI and Accessability features we wished to add. I relished this chance to work on the side of a game that often goes overlooked. Health bars, option menus and even collectable lore pick ups that would update a menu with new information were the first to be introduced. Then I moved onto graphics options, key rebinding and difficulty sliders. Finally, we added the option to change the in-game font and the font colours to make our dialogue and UI systems more accessable to people with Dyslexia. To have all these settings change and remain through subsequent playthroughs, I used binary formatting to save values to an external save file created by the game that would then be loaded as the game was opened. It was an easy, lightweight method to save the small amount of data needed for our Rogue-lite system.
 </p><p>
-Near the end of my second year working on Super Farming Boy, I was half of a two-person team tasked with revamping the in-game economy where added multiple new elements. Each needed to work as both a unique resource and as a collective currency for the purposes of specific crops and upgrades that would require a specific combination of resources. It also required the shop logic and UI to be overhauled.
-</p><p>
-Getting to work on Super Farming Boy gave me experience working on a large scale project with a big team. It also gave me the chance to expand my skills by working alone for large portions of the day due to the work being remote and most of the team being in a different timezone.
+As our scope expanded, we had two major fearures we wanted to add. The first was secondary abilities for the player that changed with each form. I achieved the Bulls charge effect by briefly turning the player into a projectile through a statemachine and added a knockback velocity to any enemies they struck into. The Eagles wingflap attack would use the knockback velocity created earlier to push back all enemies within a certain radius and damage them a small amount. Lastly the Jackal was given a bite attack that allowed them to quickly leap forwards and siphon hp from a nearby enemy. The small dash was achieved by using the knockback velocity but directing it in whatever direction the player attacked in. The second feature was a partiall destructable enviornment. I made it so that projectiles sent by either the player or enemies and the players charge attack would damage and eventually destroy the columns around the room and extinguish the torches around the map. These small changes made the map feel far more dynamic and allowed for more tactical play.
 </p>
 				</div>
 			</div>
