@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link rel="stylesheet" href="michael.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+	<div class="vertical-flex">
+		<div class="title">Michael Dunne</div>
+		<div class="navbar">
+			<a class="navbar-link" href="index.html">Games I've created</a>
+			<a class="navbar-link" href="about.html">About me</a>
+		</div>
+		<div class="align-me-center-video"><div id="player" class="align-me-center-header-video"></div></div>
+		<script>
+			  // 2. This code loads the IFrame Player API code asynchronously.
+			  var tag = document.createElement('script');
+
+			  tag.src = "https://www.youtube.com/iframe_api";
+			  var firstScriptTag = document.getElementsByTagName('script')[0];
+			  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+			  // 3. This function creates an <iframe> (and YouTube player)
+			  //    after the API code downloads.
+			  var player;
+			  function onYouTubeIframeAPIReady() {
+				player = new YT.Player('player', {
+				  height: '390',
+				  width: '640',
+				  videoId: 'mJ6Dka03i7I',
+				  playerVars: {
+					'playsinline': 1
+				  },
+				  events: {
+					'onReady': onPlayerReady,
+					'onStateChange': onPlayerStateChange
+				  }
+				});
+			  }
+
+			  // 4. The API will call this function when the video player is ready.
+			  function onPlayerReady(event) {
+			  }
+
+			  // 5. The API calls this function when the player's state changes.
+			  //    The function indicates that when playing a video (state=1),
+			  //    the player should play for six seconds and then stop.
+			  var done = false;
+			  function onPlayerStateChange(event) {
+				if (event.data == YT.PlayerState.PLAYING && !done) {
+				  done = true;
+				}
+			  }
+			  function stopVideo() {
+				player.stopVideo();
+			  }
+		</script>
+		</div>
+		<h1 class="page-title">
+			Bump
+		</h1>
+		<div class="subtitle">
+			Solo Project
+		</div>
+		<div class="subtitle">
+		<a class="more-info" href="https://michaeldunne.itch.io/bump">Play Here</a>
+		</div>
+		<div class="subtitle">
+			<a class="more-info" href="https://github.com/NoLivesRemaining/GameEnginesProject">Github Here</a>
+			</div>
+		<div class="image-word-split">
+			<div class="flex-25vw">
+			<img class="in-page-sidebar-image" src="images\Bump\Two.png">
+			<img class="in-page-sidebar-image" src="images\Bump\One.png">
+			<img class="in-page-sidebar-image" src="images\Bump\Three.png">
+			</div>
+			<div class="flex-25vw">
+				<div class="main-text">
+
+<p>
+Bump is a 3D Platformer that uses music to procedurally generates maps. It does this by listening to the internal sound of the game to make the bars of a music visualiser at the end of the course expand and compress. It then takes the height of those bars and uses them as spawn points for moving platforms that appear at regular increments. The bars of the visualiser are wrapped in frequency bands that only detect 1/8th of the frequency range and increase their y scale based off of the amount of that frequency present in the music. Childed to each of these bars I have a game object thats y transform is equal to its corrisponding bars y scale. This lead to the visualiser building a unique map to each song and the song selection becoming the difficulty selection in a way as the heavier, louder songs spiked the visualiser higher and thus created more spaced out and high up platforms. 
+</p><p>
+The player jumps around the scene while bouncing off of almost every surface to allow them to climb by flowing through the approaching platforms and bouncing off of the lower platforms from increasing heights. Wanting to allow the player to have an only enjoyable experience; dying by falling off of the platforms doesn't stop the fun, instead it rockets the player upwards giving them a much needed boost and turning 'messing up' into a sound strategy to gain some height. As a sort of safety net, I have a spawner generating rows of thick blocks to act as a broken up floor of bouncepads to allow the player to regain their footing if they lose their momentum. To prevent the game from starting to lag after a while, I have two game objects that serve as 'killers' that destroy any object that moves towards them. One serves as the floor and the other serves as the wall of white the blocks all move towards.
+</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
