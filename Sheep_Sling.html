@@ -35,9 +35,15 @@
 				<div class="main-text">
 
 <p>
-
+Sheep sling is a simple 3D physics-focused game designed to harken back to the early days of browser Flash Games. To achieve this feeling I wanted to work with simple UI and Menus, a goofy premise and a single mechanic to focus the game around. Working with such a simple idea was perfect for my first foray into Godot and GDScript. It gave me a smooth learning curve while I got to grips with what was built in and what I'd need to create myself.
 </p><p>
-
+The main mechanic of Sheep Sling is the slingshot tiles that make up the floor of the map. They're built out of two colliders, one Area3D that can be clicked and dragged by the player and a Rigidbody3D that handles the collisions with the Sheep Rigidbody3D colliders. The physics for the mechanic were created from the ground up with the player being able to raise or lower a tile along the Y axis. Once they release the tile, the amount its raised or lowered is translated into a vector that launches it back towards its starting position. The destination for this vector is exactly half as high as it was moved away from 0 originally. Once it reaches this new desitnation, it will once again travel back the opposite direction - repeating this until it reaches a certain threshold where the changes are unnoticable where it will reset. This gives a look of an elatic band snapping back and fourth.
+</p><p>
+The sheep themselves were a sucess of simplicity. I knew from the outset how I wanted them to work and the unique properties of Godot made them an interesting challenge. When the player releases a tile and it impacts a sheep, it detects the collision and calculates the directionfrom the centrepoint of the released tile and launches the sheep in that direction. The speed and height of this bounce is handled through a custom function rather than in-built math and uses the speed of the tile that is being used for the elasticity. I also ramped up the force on the Y axis to allow for bigger jumps as this was more entertaining to watch and allowed the player to bounce more sheep faster. Hectic energy was the name of the game and got a lot of positive response from playtesters. The sheep were also given a physics material with increaed bounce potential and their cull mask was adjusted to allow then to impact each other.
+</p><p>
+Some smaller details I added to increase the fun factor for players within the code was a small bit of code on the sheep that, once they had slowed to a certain degree, would make them attempt to put themselves upright so they would stand. However, I purposely made this process imperfect so that, once standing, the sheep would keep a small amount of their original movement vector and this, combined with their spherical collider, would cause them to slowly roll over and flop about in a way that utterly delighted players and improved the charm of the game tenfold. 
+</p><p>
+Learning Godot was an interesting experience. The Nodes behave so differently to the Game Objects of Unity that I was used to and understanding how to best use them took some time. For example, some of the 3D physics objects behave in very specific ways which required me to experiment multiple times to find the best one to use. For example, for the Tile scenes, I attempted to create them as CharacterBody objects and StaticBody objects before settling on Rigidbody objects as it best handled their interactions with each other and the Sheep scenes. 
 </p>
 				</div>
 			</div>
