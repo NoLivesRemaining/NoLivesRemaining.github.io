@@ -27,21 +27,21 @@
 			</div>
 		<div class="image-word-split">
 			<div class="flex-25vw">
-			<img class="in-page-sidebar-image" src="images\GrappleDash\One.png">
-			<img class="in-page-sidebar-image" src="images\GrappleDash\Two.png">
-			<img class="in-page-sidebar-image" src="images\GrappleDash\Three.png">
+			<img class="in-page-sidebar-image" src="images\GrappleDash\1.png">
+			<img class="in-page-sidebar-image" src="images\GrappleDash\2.png">
+			<img class="in-page-sidebar-image" src="images\GrappleDash\4.png">
 			</div>
 			<div class="flex-25vw">
 				<div class="main-text">
 
 <p>
-Grapple Dash is a simple 3D movement-focused game inpsired by the Hookshot from The Legend of Zelda series. This was my first solo outing with Unreal Engine 5 and to turn this project into a challenge I gave myself a restricted timeframe of a single weekend and a theme of 'swinging' akin to a Game Jam.
+Grapple Dash is a simple 3D movement-focused platformer with a focus on precise and quick aiming to navigate the level. This was my first solo outing with Unreal Engine 5 and to turn this project into a challenge I gave myself a restricted timeframe of a single week and a theme of 'movement' akin to a Game Jam.
 </p><p>
-I spent the first day working on the swinging mechanic, using Unreal's Blueprints system to create a cable the player would shoot out of their weapon via a raycast. If it struck one of the grappling points, it would attach and the player would be pulled forwards with a vector. To keep the player moving, I enforced a time window that would sever the players cable. Once disconnected, by choice or by force, the player would then enter a brief slow motion while falling to allow them to connect to another grapple point.
+My first focus was on the swinging mechanic, using Unreal's Blueprints system and C++ to create a cable the player would shoot out of their weapon via a raycast. If it struck one of the grappling points, it would attach and the player would be pulled forwards with a vector. To keep the player moving from grapple to grapple, I enforced a time window that would sever the players cable. Once disconnected, by choice or by force, the player would then enter a brief period of slow motion while falling to allow them to connect to another grapple point.
 </p><p>
-Once the grappling system felt how I was hoping, I created some glowing materials to give lighting to the course and denote which objects were able to be fired at. I also created objective rings that would rotate slowly in order to provide a challenge as the player would need to either time their approach or come in from the right angle. Next I created basic UI such as the reticle and objective counter using Blueprints and then switched to C++ for the 'grapple meter' to allow for a smoother change in its visuals.
+Once the grappling system felt how I wanted, I created some glowing materials to give lighting to the course and denote which objects were able to be fired at and how long the player had before their grapple was severed. I also created objective rings that would rotate slowly in order to provide a challenge as the player would need to either time their approach or come in from the right angle. Next I created basic UI such as the reticle and objective counter and score counter. What struck me so deeply about the move to Unreal Engine 5 was how simple it was to create save data compared to Unity. For the purposes of saving the simple high scores I needed, Unreal Engine was a breeze to work with thanks to Blueprints. 
 </p><p>
-Finally, I built the course using assets I obtained from Unreal's FAB marketplace, arranged everything to my liking and tested for bugs. With that, it was ready to share.
+Finally, I built the course using assets I obtained from Unreal's FAB marketplace, added sfx and music, arranged everything to my liking and tested for bugs. With that, it was ready to share where I received plenty of feedback from friends and family. I had to make some changes to the movement system, tweak variables of the level and added a pause menu with settings to customise the player experience.
 </p>
 				</div>
 			</div>
